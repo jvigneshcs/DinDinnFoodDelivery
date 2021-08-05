@@ -56,15 +56,55 @@
 		9B8EA24826BC029600713A29 /* Food Delivery */ = {
 			isa = PBXGroup;
 			children = (
-				9B8EA24926BC029600713A29 /* AppDelegate.swift */,
-				9B8EA24B26BC029600713A29 /* SceneDelegate.swift */,
-				9B8EA24D26BC029600713A29 /* ViewController.swift */,
-				9B8EA24F26BC029600713A29 /* Main.storyboard */,
-				9B8EA25226BC029900713A29 /* Assets.xcassets */,
-				9B8EA25426BC029900713A29 /* LaunchScreen.storyboard */,
-				9B8EA25726BC029900713A29 /* Info.plist */,
+				9B8EA26526BC0F0B00713A29 /* ViewControllers */,
+				9B8EA26426BC0EF900713A29 /* Resources */,
+				9B8EA26226BC0E0900713A29 /* User Interface */,
+				9B8EA26026BC0DC000713A29 /* Supporting Files */,
 			);
 			path = "Food Delivery";
+			sourceTree = "<group>";
+		};
+		9B8EA26026BC0DC000713A29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA24926BC029600713A29 /* AppDelegate.swift */,
+				9B8EA24B26BC029600713A29 /* SceneDelegate.swift */,
+				9B8EA25726BC029900713A29 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B8EA26226BC0E0900713A29 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA26326BC0E2900713A29 /* Storyboards */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		9B8EA26326BC0E2900713A29 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA24F26BC029600713A29 /* Main.storyboard */,
+				9B8EA25426BC029900713A29 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9B8EA26426BC0EF900713A29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA25226BC029900713A29 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B8EA26526BC0F0B00713A29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA24D26BC029600713A29 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +327,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Food Delivery/Info.plist";
+				INFOPLIST_FILE = "Food Delivery/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +346,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Food Delivery/Info.plist";
+				INFOPLIST_FILE = "Food Delivery/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
