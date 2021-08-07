@@ -10,6 +10,8 @@ import Parchment
 import FoundationExtension
 
 class DashboardViewController: UIViewController {
+    
+    @IBOutlet private weak var floatingButton: FAB!
     /// Cache the view controllers in an array to avoid re-creating them
     /// while swiping between pages. Since we only have three view
     /// controllers it's fine to keep them all in memory.
@@ -51,6 +53,8 @@ class DashboardViewController: UIViewController {
             pagingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
         
+        self.view.bringSubviewToFront(self.floatingButton)
+        self.transparentNavigationBar()
         self.loadMenus()
         
         // Set the data source for our view controllers
@@ -64,6 +68,20 @@ class DashboardViewController: UIViewController {
         // Set the UIScrollViewDelegate on the initial view controller
         // so we can update the header view while scrolling.
         self.viewControllers.first?.collectionView.delegate = self
+    }
+    
+    @IBAction private func onTapCart(_ sender: FAB) {
+        self.performSegue(withIdentifier: "MenuToCart",
+                          sender: self)
+    }
+    
+    private func transparentNavigationBar() {
+        let nb = self.navigationController?.navigationBar
+        
+        nb?.setBackgroundImage(UIImage(),
+                               for: .default)
+        nb?.shadowImage = UIImage()
+        nb?.isTranslucent = true
     }
     
     private func loadMenus() {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FAB" customModule="Food_Delivery" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="Zla-Xq-C4i" id="vQm-Mc-SXB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vuY-Yb-yOv">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zla-Xq-C4i">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal" image="outline_shopping_cart_black_48pt"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onTapButton:" destination="-1" eventType="touchUpInside" id="tyE-06-tK8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="tHs-hP-Vw3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tHs-hP-Vw3" firstAttribute="bottom" secondItem="Zla-Xq-C4i" secondAttribute="bottom" id="4ic-iJ-r0C"/>
+                <constraint firstItem="Zla-Xq-C4i" firstAttribute="top" secondItem="vuY-Yb-yOv" secondAttribute="top" id="blF-Zd-yDG"/>
+                <constraint firstItem="Zla-Xq-C4i" firstAttribute="leading" secondItem="tHs-hP-Vw3" secondAttribute="leading" id="jf7-0O-dgk"/>
+                <constraint firstItem="tHs-hP-Vw3" firstAttribute="trailing" secondItem="Zla-Xq-C4i" secondAttribute="trailing" id="s0u-vG-6M0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="80" y="166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="outline_shopping_cart_black_48pt" width="48" height="48"/>
+    </resources>
+</document>

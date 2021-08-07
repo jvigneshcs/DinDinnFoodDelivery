@@ -72,6 +72,9 @@ extension MenuViewController {
         let item = self.menu.items[indexPath.item]
         
         cell.display(item: item)
+        cell.addTapped = {
+            cell.animateAdded()
+        }
         
         return cell
     }

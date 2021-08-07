@@ -9,13 +9,14 @@ import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var consentView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var additionalInfoLabel: UILabel!
     @IBOutlet private weak var priceButton: UIButton!
     @IBOutlet private weak var addedLabel: UILabel!
+    
+    var addTapped: (() -> Void)?
     
     private var shadowLayer: CAShapeLayer!
     private var cornerRadius: CGFloat = 25.0
@@ -37,7 +38,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
         layer.shadowRadius = 8.0
         layer.shadowOpacity = 0.10
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.shadowOffset = CGSize(width: 0,
+                                    height: 5)
     }
     
     override func layoutSubviews() {
@@ -48,6 +50,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
             cornerRadius: cornerRadius
         ).cgPath
     }
+    
+    @IBAction private func onTapButton(_ sender: UIButton) {
+        self.addTapped?()
+    }
 
     func display(item: Item) {
         self.imageView.image = UIImage(named: item.imageName)
@@ -56,5 +62,23 @@ class ItemCollectionViewCell: UICollectionViewCell {
         self.additionalInfoLabel.text = item.quantity
         self.priceButton.setTitle("\(item.price) \(item.currency)",
                                   for: .normal)
+    }
+    
+    func animateAdded() {
+        let duration: TimeInterval = 0.15
+        self.addedLabel.alpha = 0
+        self.addedLabel.isHidden = false
+        
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.addedLabel.alpha = 1
+        } completion: { [weak self] _ in
+            UIView.animate(withDuration: duration,
+                           delay: 0.3,
+                           options: .curveEaseInOut) {
+                self?.addedLabel.alpha = 0
+            } completion: { _ in
+                self?.addedLabel.isHidden = true
+            }
+        }
     }
 }

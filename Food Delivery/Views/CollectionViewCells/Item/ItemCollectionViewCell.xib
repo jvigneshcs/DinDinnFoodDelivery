@@ -52,6 +52,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTapButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Jjn-39-HtY"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="added +1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3D-r4-yaY">
                                 <rect key="frame" x="169" y="357" width="100" height="45"/>
@@ -61,12 +64,13 @@
                                     <constraint firstAttribute="width" constant="100" id="T49-6G-ezJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
@@ -115,7 +119,6 @@
             <connections>
                 <outlet property="addedLabel" destination="c3D-r4-yaY" id="dCU-wo-4Wg"/>
                 <outlet property="additionalInfoLabel" destination="KGb-pw-5Pe" id="R1V-Vm-HfE"/>
-                <outlet property="consentView" destination="pqb-v3-wrh" id="5ID-RD-cQN"/>
                 <outlet property="descriptionLabel" destination="CnK-EV-kXw" id="sya-rC-3ZJ"/>
                 <outlet property="imageView" destination="wFl-xT-lyt" id="gM8-K4-R0J"/>
                 <outlet property="priceButton" destination="pPx-2A-03y" id="VAH-rE-uMd"/>
