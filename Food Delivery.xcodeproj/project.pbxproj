@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9B8EA24A26BC029600713A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA24926BC029600713A29 /* AppDelegate.swift */; };
 		9B8EA24C26BC029600713A29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA24B26BC029600713A29 /* SceneDelegate.swift */; };
-		9B8EA24E26BC029600713A29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA24D26BC029600713A29 /* ViewController.swift */; };
 		9B8EA25126BC029600713A29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8EA24F26BC029600713A29 /* Main.storyboard */; };
 		9B8EA25326BC029900713A29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8EA25226BC029900713A29 /* Assets.xcassets */; };
 		9B8EA25626BC029900713A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8EA25426BC029900713A29 /* LaunchScreen.storyboard */; };
+		9B8EA26926BC101600713A29 /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8EA26826BC101600713A29 /* Parchment */; };
+		9B8EA27126BC15F800713A29 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA27026BC15F800713A29 /* PromotionViewController.swift */; };
+		9B8EA27426BC163B00713A29 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA27326BC163B00713A29 /* DashboardViewController.swift */; };
+		9BA5F56B26BE516B006FDD8C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F56A26BE516B006FDD8C /* MenuViewController.swift */; };
+		9BA5F57126BE521A006FDD8C /* PromotionsContainerPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57026BE521A006FDD8C /* PromotionsContainerPagingView.swift */; };
+		9BA5F57526BE5294006FDD8C /* PromotionsPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */; };
+		9BA5F57926BE554A006FDD8C /* SelfInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57826BE554A006FDD8C /* SelfInitViewController.swift */; };
+		9BA5F57F26BE5A16006FDD8C /* Menus.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F57E26BE5A16006FDD8C /* Menus.json */; };
+		9BA5F58426BE5A8F006FDD8C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F58326BE5A8F006FDD8C /* Menu.swift */; };
+		9BA5F58926BE5AFF006FDD8C /* FoundationExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 9BA5F58826BE5AFF006FDD8C /* FoundationExtension */; };
+		9BA5F58C26BE67CF006FDD8C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F58B26BE67CF006FDD8C /* Item.swift */; };
+		9BA5F59226BE68A5006FDD8C /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F59026BE68A5006FDD8C /* ItemCollectionViewCell.swift */; };
+		9BA5F59326BE68A5006FDD8C /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F59126BE68A5006FDD8C /* ItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B8EA24626BC029600713A29 /* Food Delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8EA24926BC029600713A29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B8EA24B26BC029600713A29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B8EA24D26BC029600713A29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B8EA25026BC029600713A29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B8EA25226BC029900713A29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8EA25526BC029900713A29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8EA25726BC029900713A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8EA27026BC15F800713A29 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
+		9B8EA27326BC163B00713A29 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		9BA5F56A26BE516B006FDD8C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9BA5F57026BE521A006FDD8C /* PromotionsContainerPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsContainerPagingView.swift; sourceTree = "<group>"; };
+		9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsPagingViewController.swift; sourceTree = "<group>"; };
+		9BA5F57826BE554A006FDD8C /* SelfInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfInitViewController.swift; sourceTree = "<group>"; };
+		9BA5F57E26BE5A16006FDD8C /* Menus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Menus.json; sourceTree = "<group>"; };
+		9BA5F58326BE5A8F006FDD8C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		9BA5F58B26BE67CF006FDD8C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9BA5F59026BE68A5006FDD8C /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BA5F59126BE68A5006FDD8C /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8EA26926BC101600713A29 /* Parchment in Frameworks */,
+				9BA5F58926BE5AFF006FDD8C /* FoundationExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +80,10 @@
 		9B8EA24826BC029600713A29 /* Food Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				9BA5F58126BE5A6B006FDD8C /* Models */,
+				9BA5F57C26BE59F2006FDD8C /* Files */,
+				9BA5F57726BE5527006FDD8C /* Protocols */,
+				9BA5F56E26BE51D9006FDD8C /* Views */,
 				9B8EA26526BC0F0B00713A29 /* ViewControllers */,
 				9B8EA26426BC0EF900713A29 /* Resources */,
 				9B8EA26226BC0E0900713A29 /* User Interface */,
@@ -102,9 +130,127 @@
 		9B8EA26526BC0F0B00713A29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B8EA24D26BC029600713A29 /* ViewController.swift */,
+				9BA5F56926BE515B006FDD8C /* Menu */,
+				9BA5F56326BE48C4006FDD8C /* Paging */,
+				9B8EA26E26BC15CA00713A29 /* Promotion */,
+				9B8EA26C26BC15B800713A29 /* Dashboard */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B8EA26C26BC15B800713A29 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA27326BC163B00713A29 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		9B8EA26E26BC15CA00713A29 /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EA27026BC15F800713A29 /* PromotionViewController.swift */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
+		9BA5F56326BE48C4006FDD8C /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F56426BE48D9006FDD8C /* Container */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		9BA5F56426BE48D9006FDD8C /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		9BA5F56926BE515B006FDD8C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F56A26BE516B006FDD8C /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		9BA5F56E26BE51D9006FDD8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F58E26BE685B006FDD8C /* CollectionViewCells */,
+				9BA5F56F26BE51DF006FDD8C /* PromotionsConainer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BA5F56F26BE51DF006FDD8C /* PromotionsConainer */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F57026BE521A006FDD8C /* PromotionsContainerPagingView.swift */,
+			);
+			path = PromotionsConainer;
+			sourceTree = "<group>";
+		};
+		9BA5F57726BE5527006FDD8C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F57826BE554A006FDD8C /* SelfInitViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9BA5F57C26BE59F2006FDD8C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F57D26BE59FA006FDD8C /* JSON */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		9BA5F57D26BE59FA006FDD8C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F57E26BE5A16006FDD8C /* Menus.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		9BA5F58126BE5A6B006FDD8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F58226BE5A78006FDD8C /* Codable */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BA5F58226BE5A78006FDD8C /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F58326BE5A8F006FDD8C /* Menu.swift */,
+				9BA5F58B26BE67CF006FDD8C /* Item.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		9BA5F58E26BE685B006FDD8C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F58F26BE6878006FDD8C /* Item */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		9BA5F58F26BE6878006FDD8C /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F59026BE68A5006FDD8C /* ItemCollectionViewCell.swift */,
+				9BA5F59126BE68A5006FDD8C /* ItemCollectionViewCell.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +269,10 @@
 			dependencies = (
 			);
 			name = "Food Delivery";
+			packageProductDependencies = (
+				9B8EA26826BC101600713A29 /* Parchment */,
+				9BA5F58826BE5AFF006FDD8C /* FoundationExtension */,
+			);
 			productName = "Food Delivery";
 			productReference = 9B8EA24626BC029600713A29 /* Food Delivery.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +300,10 @@
 				Base,
 			);
 			mainGroup = 9B8EA23D26BC029600713A29;
+			packageReferences = (
+				9B8EA26726BC101600713A29 /* XCRemoteSwiftPackageReference "Parchment" */,
+				9BA5F58726BE5AFF006FDD8C /* XCRemoteSwiftPackageReference "SwiftExtension" */,
+			);
 			productRefGroup = 9B8EA24726BC029600713A29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,6 +320,8 @@
 			files = (
 				9B8EA25626BC029900713A29 /* LaunchScreen.storyboard in Resources */,
 				9B8EA25326BC029900713A29 /* Assets.xcassets in Resources */,
+				9BA5F59326BE68A5006FDD8C /* ItemCollectionViewCell.xib in Resources */,
+				9BA5F57F26BE5A16006FDD8C /* Menus.json in Resources */,
 				9B8EA25126BC029600713A29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,9 +333,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8EA24E26BC029600713A29 /* ViewController.swift in Sources */,
+				9BA5F58C26BE67CF006FDD8C /* Item.swift in Sources */,
+				9BA5F59226BE68A5006FDD8C /* ItemCollectionViewCell.swift in Sources */,
 				9B8EA24A26BC029600713A29 /* AppDelegate.swift in Sources */,
+				9BA5F56B26BE516B006FDD8C /* MenuViewController.swift in Sources */,
+				9BA5F57126BE521A006FDD8C /* PromotionsContainerPagingView.swift in Sources */,
+				9B8EA27126BC15F800713A29 /* PromotionViewController.swift in Sources */,
+				9BA5F57926BE554A006FDD8C /* SelfInitViewController.swift in Sources */,
 				9B8EA24C26BC029600713A29 /* SceneDelegate.swift in Sources */,
+				9BA5F58426BE5A8F006FDD8C /* Menu.swift in Sources */,
+				9B8EA27426BC163B00713A29 /* DashboardViewController.swift in Sources */,
+				9BA5F57526BE5294006FDD8C /* PromotionsPagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +545,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B8EA26726BC101600713A29 /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rechsteiner/Parchment.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+		9BA5F58726BE5AFF006FDD8C /* XCRemoteSwiftPackageReference "SwiftExtension" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jvigneshcs/SwiftExtension.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B8EA26826BC101600713A29 /* Parchment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B8EA26726BC101600713A29 /* XCRemoteSwiftPackageReference "Parchment" */;
+			productName = Parchment;
+		};
+		9BA5F58826BE5AFF006FDD8C /* FoundationExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BA5F58726BE5AFF006FDD8C /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = FoundationExtension;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B8EA23E26BC029600713A29 /* Project object */;
 }
