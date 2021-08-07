@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FAB" customModule="Food_Delivery" customModuleProvider="target">
             <connections>
+                <outlet property="badge" destination="PIV-d9-eV5" id="fLN-9H-vGF"/>
                 <outlet property="button" destination="Zla-Xq-C4i" id="vQm-Mc-SXB"/>
             </connections>
         </placeholder>
@@ -32,13 +33,31 @@
                         <action selector="onTapButton:" destination="-1" eventType="touchUpInside" id="tyE-06-tK8"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIV-d9-eV5" customClass="BadgeSwift" customModule="BadgeSwift">
+                    <rect key="frame" x="40" y="0.0" width="20" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="bWr-k7-Jrt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                            <color key="value" systemColor="systemGreenColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="tHs-hP-Vw3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="tHs-hP-Vw3" firstAttribute="bottom" secondItem="Zla-Xq-C4i" secondAttribute="bottom" id="4ic-iJ-r0C"/>
+                <constraint firstItem="PIV-d9-eV5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vuY-Yb-yOv" secondAttribute="leading" constant="4" id="6na-Uw-6s7"/>
+                <constraint firstItem="PIV-d9-eV5" firstAttribute="top" secondItem="vuY-Yb-yOv" secondAttribute="top" id="ath-MA-jIj"/>
                 <constraint firstItem="Zla-Xq-C4i" firstAttribute="top" secondItem="vuY-Yb-yOv" secondAttribute="top" id="blF-Zd-yDG"/>
                 <constraint firstItem="Zla-Xq-C4i" firstAttribute="leading" secondItem="tHs-hP-Vw3" secondAttribute="leading" id="jf7-0O-dgk"/>
+                <constraint firstAttribute="trailing" secondItem="PIV-d9-eV5" secondAttribute="trailing" id="ovq-6u-yON"/>
                 <constraint firstItem="tHs-hP-Vw3" firstAttribute="trailing" secondItem="Zla-Xq-C4i" secondAttribute="trailing" id="s0u-vG-6M0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -47,5 +66,8 @@
     </objects>
     <resources>
         <image name="outline_shopping_cart_black_48pt" width="48" height="48"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

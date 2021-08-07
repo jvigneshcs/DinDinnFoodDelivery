@@ -3,6 +3,7 @@
         "name": "Pizza",
         "items": [
             {
+                "identifier": "1",
                 "name": "Deluxe",
                 "description": "Half sweet green pepper , sliced · Half batch",
                 "quantity": "580 grams, 4 pieces",
@@ -11,6 +12,7 @@
                 "imageName": "DeluxePizza",
             },
             {
+                "identifier": "2",
                 "name": "Hawaiin",
                 "description": "Classic Hawaiian Pizza combines pizza sauce, cheese, cooked ham, and pineapple",
                 "quantity": "580 grams, 4 pieces",
@@ -19,6 +21,7 @@
                 "imageName": "HawaiianPizza",
             },
             {
+                "identifier": "3",
                 "name": "Pepperoni",
                 "description": "Pepperoni is characteristically soft, slightly smoky, and bright red in color. Thinly sliced",
                 "quantity": "580 grams, 4 pieces",
@@ -27,6 +30,7 @@
                 "imageName": "PepperoniPizza",
             },
             {
+                "identifier": "4",
                 "name": "Cheese Burst",
                 "description": "A unique and popular pizza type which has a thick crust with yummy liquid or molten cheese inside",
                 "quantity": "580 grams, 4 pieces",
@@ -35,6 +39,7 @@
                 "imageName": "CheeseBurstPizza",
             },
             {
+                "identifier": "5",
                 "name": "Italian",
                 "description": "Flattened base of leavened wheat-based dough topped with tomatoes, cheese",
                 "quantity": "580 grams, 4 pieces",
@@ -48,6 +53,7 @@
         "name": "Sushi",
         "items": [
             {
+                "identifier": "6",
                 "name": "Philadelphia",
                 "description": "Makizushi type of sushi generally made with smoked salmon, cream cheese and cucumber",
                 "quantity": "280 grams, 8 pieces",
@@ -56,6 +62,7 @@
                 "imageName": "PhiladelphiaRoll",
             },
             {
+                "identifier": "7",
                 "name": "California",
                 "description": "Makizushi sushi roll containing cucumber, crab",
                 "quantity": "280 grams, 8 pieces",
@@ -64,6 +71,7 @@
                 "imageName": "CaliforniaRoll",
             },
             {
+                "identifier": "8",
                 "name": "Makizushi",
                 "description": "Japanese sushi roll filled with various fillings",
                 "quantity": "280 grams, 8 pieces",
@@ -72,6 +80,7 @@
                 "imageName": "Makisushi",
             },
             {
+                "identifier": "9",
                 "name": "Spicy Tuna",
                 "description": "Makizushi roll contains raw tuna and spicy mayo",
                 "quantity": "280 grams, 8 pieces",
@@ -80,6 +89,7 @@
                 "imageName": "SpicyTunaRoll",
             },
             {
+                "identifier": "10",
                 "name": "Dynamite",
                 "description": "Contains a piece of prawn tempura and masago, with vegetables",
                 "quantity": "280 grams, 8 pieces",
@@ -93,6 +103,7 @@
         "name": "Drinks",
         "items": [
             {
+                "identifier": "11",
                 "name": "Blue Lagoon",
                 "description": "A great twist on the classic mojito cocktail",
                 "quantity": "300 ml",
@@ -101,6 +112,7 @@
                 "imageName": "BlueLagoonCocktail",
             },
             {
+                "identifier": "12",
                 "name": "Mojito",
                 "description": "Mojito is a traditional Cuban highball",
                 "quantity": "300 ml",
@@ -109,6 +121,7 @@
                 "imageName": "Mojito",
             },
             {
+                "identifier": "13",
                 "name": "Tequila Sunrise",
                 "description": "Cocktail made of tequila, orange juice, and grenadine syrup",
                 "quantity": "200 ml",
@@ -117,6 +130,7 @@
                 "imageName": "TequilaSunrise",
             },
             {
+                "identifier": "14",
                 "name": "Blue Hawaii",
                 "description": "Tropical cocktail made of rum, pineapple juice, Blue Curaçao, sweet and sour mix",
                 "quantity": "300 ml",
@@ -125,6 +139,7 @@
                 "imageName": "BlueHawaiiCocktail",
             },
             {
+                "identifier": "15",
                 "name": "Margarita",
                 "description": "Cocktail consisting of tequila, orange liqueur, and lime juice",
                 "quantity": "150 ml",

@@ -10,6 +10,7 @@ import UIKit
 final class MenuViewController: UICollectionViewController {
     
     var menu: Menu!
+    var cart: Cart!
     
     private let cellIdentifier = String(describing: ItemCollectionViewCell.self)
     
@@ -72,11 +73,18 @@ extension MenuViewController {
         let item = self.menu.items[indexPath.item]
         
         cell.display(item: item)
-        cell.addTapped = {
-            cell.animateAdded()
+        cell.addTapped = { [weak self] in
+            self?.selected(item: item,
+                           in: cell)
         }
         
         return cell
+    }
+    
+    private func selected(item: Item,
+                          in cell: ItemCollectionViewCell) {
+        self.cart.add(item: item)
+        cell.animateAdded()
     }
 }
 

@@ -18,6 +18,8 @@ class DashboardViewController: UIViewController {
     private var viewControllers = [MenuViewController]()
 
     private let pagingViewController = PromotionsPagingViewController()
+    
+    private lazy var cart: Cart = Cart.shared
 
     private var headerConstraint: NSLayoutConstraint {
         let pagingView = pagingViewController.view as! PromotionsContainerPagingView
@@ -56,6 +58,7 @@ class DashboardViewController: UIViewController {
         self.view.bringSubviewToFront(self.floatingButton)
         self.transparentNavigationBar()
         self.loadMenus()
+        self.observeCart()
         
         // Set the data source for our view controllers
         self.pagingViewController.dataSource = self
@@ -90,6 +93,7 @@ class DashboardViewController: UIViewController {
         guard let vcs = menus?.compactMap({ menu -> MenuViewController? in
             let vc = MenuViewController.instance
             vc.menu = menu
+            vc.cart = cart
             
             return vc
         }) else {
@@ -97,6 +101,12 @@ class DashboardViewController: UIViewController {
         }
         
         self.viewControllers = vcs
+    }
+    
+    private func observeCart() {
+        self.cart.quantityObserver = { [weak self] in
+            self?.floatingButton.animateBadge(number: $0)
+        }
     }
 }
 
