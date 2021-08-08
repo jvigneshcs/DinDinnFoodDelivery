@@ -48,8 +48,19 @@
                     <view key="view" contentMode="scaleToFill" id="68b-6H-Itl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-qh-N8w">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AbV-pW-73x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eg2-qh-N8w" firstAttribute="leading" secondItem="AbV-pW-73x" secondAttribute="leading" id="7rw-rQ-APQ"/>
+                            <constraint firstAttribute="bottom" secondItem="eg2-qh-N8w" secondAttribute="bottom" id="Tm7-qr-EXr"/>
+                            <constraint firstItem="eg2-qh-N8w" firstAttribute="top" secondItem="68b-6H-Itl" secondAttribute="top" id="sgQ-qf-IjN"/>
+                            <constraint firstItem="eg2-qh-N8w" firstAttribute="trailing" secondItem="AbV-pW-73x" secondAttribute="trailing" id="w1U-8f-CgH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O5-WV-Xl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,8 +74,19 @@
                     <view key="view" contentMode="scaleToFill" id="RqR-f8-gpe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rdZ-JF-vet">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gpQ-Tt-HpB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rdZ-JF-vet" secondAttribute="bottom" id="86U-qD-Tje"/>
+                            <constraint firstItem="rdZ-JF-vet" firstAttribute="top" secondItem="RqR-f8-gpe" secondAttribute="top" id="EdX-tz-Gaq"/>
+                            <constraint firstItem="rdZ-JF-vet" firstAttribute="leading" secondItem="gpQ-Tt-HpB" secondAttribute="leading" id="IC6-Vg-LPm"/>
+                            <constraint firstItem="rdZ-JF-vet" firstAttribute="trailing" secondItem="gpQ-Tt-HpB" secondAttribute="trailing" id="LRU-Fh-Zyt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-Sy-e2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

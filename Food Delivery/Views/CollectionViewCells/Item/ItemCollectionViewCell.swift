@@ -60,7 +60,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         self.titleLabel.text = item.name
         self.descriptionLabel.text = item.description
         self.additionalInfoLabel.text = item.quantity
-        self.priceButton.setTitle(item.formatterPriceWithCurrency(quantity: 1),
+        self.priceButton.setTitle(item.formattedPriceWithCurrency(quantity: 1),
                                   for: .normal)
     }
     

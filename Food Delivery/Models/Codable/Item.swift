@@ -27,26 +27,16 @@ extension Item: Equatable,
 
 extension Item {
     
-    private static var valueFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 2
-        
-        return formatter
-    }()
-    
-    var formatterPrice: String {
+    var formattedPrice: String {
         self.formattedPrice(quantity: 1)
     }
     
-    func formatterPriceWithCurrency(quantity: Int) -> String {
+    func formattedPriceWithCurrency(quantity: Int) -> String {
         "\(self.formattedPrice(quantity: quantity)) \(self.currency)"
     }
     
     private func formattedPrice(quantity: Int) -> String {
-        let number = NSNumber(value: self.price * Double(quantity))
-        
-        return Self.valueFormatter.string(from: number)!
+        PriceFormatter.shared.formatted(price: self.price,
+                                        quantity: quantity)
     }
 }

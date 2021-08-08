@@ -33,6 +33,6 @@ class CartItemTableViewCell: UITableViewCell {
         }
         self.itemImageView?.image = UIImage(named: item.imageName)
         self.titleLabel.text = title
-        self.priceLabel.text = item.formatterPriceWithCurrency(quantity: quantity)
+        self.priceLabel.text = item.formattedPriceWithCurrency(quantity: quantity)
     }
 }

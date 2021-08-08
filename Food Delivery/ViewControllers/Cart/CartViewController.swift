@@ -11,20 +11,22 @@ final class CartViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private var footerView: CartTableFooterView?
+    
     var cart: Cart!
     
     private let cartItemCellIdentifier = String(describing: CartItemTableViewCell.self)
+    private let footerIdentifier = String(describing: CartTableFooterView.self)
     
     private lazy var items: [Item: Int] = self.cart.items
+    private lazy var priceFormatter: PriceFormatter = PriceFormatter.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: self.cartItemCellIdentifier,
-                        bundle: nil)
-
+        
+        self.customizeTableView()
+        self.updateFooter(for: self.items)
         self.observeItemChange()
-        self.tableView.register(nib,
-                                forCellReuseIdentifier: self.cartItemCellIdentifier)
     }
     
 
@@ -37,10 +39,28 @@ final class CartViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func customizeTableView() {
+        let cellNib = UINib(nibName: self.cartItemCellIdentifier,
+                            bundle: nil)
+        let footerNib = UINib(nibName: self.footerIdentifier,
+                              bundle: nil)
+        
+        self.tableView.register(cellNib,
+                                forCellReuseIdentifier: self.cartItemCellIdentifier)
+        self.tableView.register(footerNib,
+                                forHeaderFooterViewReuseIdentifier: self.footerIdentifier)
+        
+        let footerView = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: self.footerIdentifier) as? CartTableFooterView
+        
+        self.footerView = footerView
+        self.tableView.tableFooterView = footerView
+    }
 
     private func observeItemChange() {
         self.cart.itemsObserver = { [weak self] in
             self?.items = $0
+            self?.updateFooter(for: $0)
         }
     }
     
@@ -48,6 +68,65 @@ final class CartViewController: UIViewController {
         let keys = Array(self.items.keys)
         
         return keys[index]
+    }
+    
+    private func updateFooter(for items: [Item: Int]) {
+        if items.isEmpty {
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 24,
+                                         weight: .medium),
+            ]
+            let attributedText = NSAttributedString(string: "Your Cart is empty",
+                                                    attributes: attributes)
+            
+            self.footerView?.titleLabel.textAlignment = .center
+            self.footerView?.titleLabel.attributedText = attributedText
+        } else {
+            let currency = items.first!.key.currency
+            let price = items.compactMap { $0.key.price }
+                .reduce(0, +)
+            let deliveryAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.systemFont(ofSize: 14,
+                                         weight: .light),
+            ]
+            let valueAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 14,
+                                         weight: .light),
+            ]
+            let priceAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 32,
+                                         weight: .semibold),
+            ]
+            let attributedText = NSMutableAttributedString(string: "Delivery is free\n", attributes: deliveryAttributes)
+            let valueText = NSAttributedString(string: "Value:",
+                                               attributes: valueAttributes)
+            let priceString = " \(self.priceFormatter.formatted(price: price, quantity: 1, currency: currency))"
+            let priceText = NSAttributedString(string: priceString,
+                                               attributes: priceAttributes)
+            
+            attributedText.append(valueText)
+            attributedText.append(priceText)
+            
+            self.footerView?.titleLabel.textAlignment = .left
+            self.footerView?.titleLabel.attributedText = attributedText
+        }
+        
+        guard let footerView = self.footerView else {
+            return
+        }
+        let width = self.tableView.bounds.size.width
+        let fittingSize = CGSize(width: width,
+                                 height: UIView.layoutFittingCompressedSize.height)
+        let size = footerView.systemLayoutSizeFitting(fittingSize)
+        
+        if footerView.frame.size.height != size.height {
+            footerView.frame.size.height = size.height
+            self.tableView.tableFooterView = footerView
+        }
     }
 }
 
