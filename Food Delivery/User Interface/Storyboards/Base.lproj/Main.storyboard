@@ -42,28 +42,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="floatingButton" destination="fy9-Ea-KQ4" id="J4a-RO-Mdt"/>
-                        <segue destination="1xl-Vl-eCE" kind="show" identifier="MenuToCart" id="xRq-rb-rqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1031.8840579710145" y="113.83928571428571"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="IpB-ZO-b1O">
-            <objects>
-                <viewController id="1xl-Vl-eCE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z54-LW-m5O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JHb-bh-mrD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wwH-G1-jNJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Map-OQ-t4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1986" y="114"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="dtM-xd-q1q">
@@ -97,7 +80,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQj-q9-eyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923" y="114"/>
+            <point key="canvasLocation" x="1930" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lKl-yJ-SRn">

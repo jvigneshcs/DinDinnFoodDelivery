@@ -12,8 +12,9 @@ class Cart {
     static let shared: Cart = Cart()
     
     var quantityObserver: ((Int) -> Void)?
+    var itemsObserver: (([Item: Int]) -> Void)?
     
-    private var items = [Item: Int]()
+    private(set) var items = [Item: Int]()
     
     init() {}
     
@@ -35,5 +36,6 @@ class Cart {
         let quantity = self.items.compactMap { $1 }.reduce(0, +)
         
         self.quantityObserver?(quantity)
+        self.itemsObserver?(self.items)
     }
 }

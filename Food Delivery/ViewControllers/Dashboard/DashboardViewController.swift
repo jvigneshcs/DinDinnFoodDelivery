@@ -74,8 +74,10 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction private func onTapCart(_ sender: FAB) {
-        self.performSegue(withIdentifier: "MenuToCart",
-                          sender: self)
+        let shoppingDashboardVC = ShoppingDashboardViewController()
+        shoppingDashboardVC.cart = self.cart
+        self.navigationController?.pushViewController(shoppingDashboardVC,
+                                                      animated: true)
     }
     
     private func transparentNavigationBar() {
