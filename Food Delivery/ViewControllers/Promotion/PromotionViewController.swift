@@ -7,11 +7,23 @@
 
 import UIKit
 
-class PromotionViewController: UIViewController {
+final class PromotionViewController: UIViewController {
+    
+    @IBOutlet private weak var imageView: UIImageView!
+    
+    private var image: UIImage!
+    
+    class func initWithImage(_ image: UIImage) -> PromotionViewController {
+        let vc = Self.instance
+        vc.image = image
+        
+        return vc
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.imageView.image = self.image
     }
     
 
@@ -25,4 +37,15 @@ class PromotionViewController: UIViewController {
     }
     */
 
+}
+
+extension PromotionViewController: SelfInitViewController {
+    
+    static var instance: PromotionViewController {
+        let storyboard = UIStoryboard(name: "Promotion",
+                                      bundle: nil)
+        let identifier = String(describing: PromotionViewController.self)
+        
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! PromotionViewController
+    }
 }

@@ -17,7 +17,6 @@
 		9B8EA27426BC163B00713A29 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EA27326BC163B00713A29 /* DashboardViewController.swift */; };
 		9BA5F56B26BE516B006FDD8C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F56A26BE516B006FDD8C /* MenuViewController.swift */; };
 		9BA5F57126BE521A006FDD8C /* PromotionsContainerPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57026BE521A006FDD8C /* PromotionsContainerPagingView.swift */; };
-		9BA5F57526BE5294006FDD8C /* PromotionsPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */; };
 		9BA5F57926BE554A006FDD8C /* SelfInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F57826BE554A006FDD8C /* SelfInitViewController.swift */; };
 		9BA5F57F26BE5A16006FDD8C /* Menus.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F57E26BE5A16006FDD8C /* Menus.json */; };
 		9BA5F58426BE5A8F006FDD8C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F58326BE5A8F006FDD8C /* Menu.swift */; };
@@ -39,6 +38,10 @@
 		9BA5F5CD26BFB7E5006FDD8C /* CartTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5CC26BFB7E5006FDD8C /* CartTableFooterView.swift */; };
 		9BA5F5D126BFB845006FDD8C /* CartTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F5D026BFB845006FDD8C /* CartTableFooterView.xib */; };
 		9BA5F5D426BFBC52006FDD8C /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5D326BFBC52006FDD8C /* PriceFormatter.swift */; };
+		9BA5F5D826BFC7FB006FDD8C /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5D726BFC7FB006FDD8C /* PromotionsViewController.swift */; };
+		9BA5F5DC26BFC83B006FDD8C /* Promotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F5DB26BFC83B006FDD8C /* Promotion.storyboard */; };
+		9BA5F5E126BFCB19006FDD8C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5E026BFCB19006FDD8C /* UIView+Constraints.swift */; };
+		9BA5F5E726BFCBE2006FDD8C /* PromotionsPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5E626BFCBE2006FDD8C /* PromotionsPagingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +56,6 @@
 		9B8EA27326BC163B00713A29 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		9BA5F56A26BE516B006FDD8C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9BA5F57026BE521A006FDD8C /* PromotionsContainerPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsContainerPagingView.swift; sourceTree = "<group>"; };
-		9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsPagingViewController.swift; sourceTree = "<group>"; };
 		9BA5F57826BE554A006FDD8C /* SelfInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfInitViewController.swift; sourceTree = "<group>"; };
 		9BA5F57E26BE5A16006FDD8C /* Menus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Menus.json; sourceTree = "<group>"; };
 		9BA5F58326BE5A8F006FDD8C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -73,6 +75,10 @@
 		9BA5F5CC26BFB7E5006FDD8C /* CartTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableFooterView.swift; sourceTree = "<group>"; };
 		9BA5F5D026BFB845006FDD8C /* CartTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableFooterView.xib; sourceTree = "<group>"; };
 		9BA5F5D326BFBC52006FDD8C /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
+		9BA5F5D726BFC7FB006FDD8C /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
+		9BA5F5DB26BFC83B006FDD8C /* Promotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Promotion.storyboard; sourceTree = "<group>"; };
+		9BA5F5E026BFCB19006FDD8C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		9BA5F5E626BFCBE2006FDD8C /* PromotionsPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsPagingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		9B8EA24826BC029600713A29 /* Food Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				9BA5F5DF26BFCB01006FDD8C /* Extensions */,
 				9BA5F58126BE5A6B006FDD8C /* Models */,
 				9BA5F57C26BE59F2006FDD8C /* Files */,
 				9BA5F57726BE5527006FDD8C /* Protocols */,
@@ -144,6 +151,7 @@
 				9B8EA24F26BC029600713A29 /* Main.storyboard */,
 				9B8EA25426BC029900713A29 /* LaunchScreen.storyboard */,
 				9BA5F5B726BEB997006FDD8C /* Shopping.storyboard */,
+				9BA5F5DB26BFC83B006FDD8C /* Promotion.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -159,12 +167,13 @@
 		9B8EA26526BC0F0B00713A29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9BA5F5E426BFCBBA006FDD8C /* Paging */,
+				9BA5F5D626BFC7E5006FDD8C /* Promotions */,
 				9BA5F5B326BEB94E006FDD8C /* Information */,
 				9BA5F5AE26BEB936006FDD8C /* Orders */,
 				9BA5F5A926BEB91C006FDD8C /* Cart */,
 				9BA5F5A426BEB30E006FDD8C /* ShoppingDashboard */,
 				9BA5F56926BE515B006FDD8C /* Menu */,
-				9BA5F56326BE48C4006FDD8C /* Paging */,
 				9B8EA26E26BC15CA00713A29 /* Promotion */,
 				9B8EA26C26BC15B800713A29 /* Dashboard */,
 			);
@@ -185,22 +194,6 @@
 				9B8EA27026BC15F800713A29 /* PromotionViewController.swift */,
 			);
 			path = Promotion;
-			sourceTree = "<group>";
-		};
-		9BA5F56326BE48C4006FDD8C /* Paging */ = {
-			isa = PBXGroup;
-			children = (
-				9BA5F56426BE48D9006FDD8C /* Container */,
-			);
-			path = Paging;
-			sourceTree = "<group>";
-		};
-		9BA5F56426BE48D9006FDD8C /* Container */ = {
-			isa = PBXGroup;
-			children = (
-				9BA5F57426BE5294006FDD8C /* PromotionsPagingViewController.swift */,
-			);
-			path = Container;
 			sourceTree = "<group>";
 		};
 		9BA5F56926BE515B006FDD8C /* Menu */ = {
@@ -366,6 +359,38 @@
 			path = CartFooterView;
 			sourceTree = "<group>";
 		};
+		9BA5F5D626BFC7E5006FDD8C /* Promotions */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F5D726BFC7FB006FDD8C /* PromotionsViewController.swift */,
+			);
+			path = Promotions;
+			sourceTree = "<group>";
+		};
+		9BA5F5DF26BFCB01006FDD8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F5E026BFCB19006FDD8C /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BA5F5E426BFCBBA006FDD8C /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F5E526BFCBC1006FDD8C /* Container */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		9BA5F5E526BFCBC1006FDD8C /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F5E626BFCBE2006FDD8C /* PromotionsPagingViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +460,7 @@
 			files = (
 				9B8EA25626BC029900713A29 /* LaunchScreen.storyboard in Resources */,
 				9B8EA25326BC029900713A29 /* Assets.xcassets in Resources */,
+				9BA5F5DC26BFC83B006FDD8C /* Promotion.storyboard in Resources */,
 				9BA5F59326BE68A5006FDD8C /* ItemCollectionViewCell.xib in Resources */,
 				9BA5F59C26BE905E006FDD8C /* FAB.xib in Resources */,
 				9BA5F57F26BE5A16006FDD8C /* Menus.json in Resources */,
@@ -455,22 +481,24 @@
 				9BA5F58C26BE67CF006FDD8C /* Item.swift in Sources */,
 				9BA5F5A626BEB331006FDD8C /* ShoppingDashboardViewController.swift in Sources */,
 				9BA5F5D426BFBC52006FDD8C /* PriceFormatter.swift in Sources */,
+				9BA5F5E126BFCB19006FDD8C /* UIView+Constraints.swift in Sources */,
 				9BA5F5C726BFA356006FDD8C /* CartItemTableViewCell.swift in Sources */,
 				9BA5F59226BE68A5006FDD8C /* ItemCollectionViewCell.swift in Sources */,
 				9BA5F5B026BEB945006FDD8C /* OrdersViewController.swift in Sources */,
 				9B8EA24A26BC029600713A29 /* AppDelegate.swift in Sources */,
 				9BA5F5A226BEA03E006FDD8C /* Cart.swift in Sources */,
 				9BA5F56B26BE516B006FDD8C /* MenuViewController.swift in Sources */,
+				9BA5F5E726BFCBE2006FDD8C /* PromotionsPagingViewController.swift in Sources */,
 				9BA5F5CD26BFB7E5006FDD8C /* CartTableFooterView.swift in Sources */,
 				9BA5F57126BE521A006FDD8C /* PromotionsContainerPagingView.swift in Sources */,
 				9BA5F5AB26BEB929006FDD8C /* CartViewController.swift in Sources */,
 				9BA5F59F26BE9083006FDD8C /* FAB.swift in Sources */,
 				9B8EA27126BC15F800713A29 /* PromotionViewController.swift in Sources */,
 				9BA5F57926BE554A006FDD8C /* SelfInitViewController.swift in Sources */,
+				9BA5F5D826BFC7FB006FDD8C /* PromotionsViewController.swift in Sources */,
 				9B8EA24C26BC029600713A29 /* SceneDelegate.swift in Sources */,
 				9BA5F58426BE5A8F006FDD8C /* Menu.swift in Sources */,
 				9B8EA27426BC163B00713A29 /* DashboardViewController.swift in Sources */,
-				9BA5F57526BE5294006FDD8C /* PromotionsPagingViewController.swift in Sources */,
 				9BA5F5B526BEB95B006FDD8C /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

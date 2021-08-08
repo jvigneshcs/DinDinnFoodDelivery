@@ -14,12 +14,7 @@ class PromotionsContainerPagingView: PagingView {
 
     var headerHeightConstraint: NSLayoutConstraint?
 
-    private lazy var headerView: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "Promo1"))
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = true
-        return view
-    }()
+    private(set) lazy var headerView: UIView = UIView()
 
     override func setupConstraints() {
         addSubview(headerView)

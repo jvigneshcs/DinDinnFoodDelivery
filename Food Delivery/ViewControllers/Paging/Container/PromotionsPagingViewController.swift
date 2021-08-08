@@ -19,7 +19,15 @@ class PromotionsPagingViewController: PagingViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let view = self.view as? PromotionsContainerPagingView else {
+            return
+        }
+        let vc = PromotionsViewController.instance
+        
+        self.addChild(vc)
+        view.headerView.addSubview(vc.view)
+        view.headerView.constrainToEdges(vc.view)
+        vc.didMove(toParent: self)
     }
     
 

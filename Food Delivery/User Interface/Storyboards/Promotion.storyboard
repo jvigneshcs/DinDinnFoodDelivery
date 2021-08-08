@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Promotions View Controller-->
+        <scene sceneID="Mmb-YN-ZAr">
+            <objects>
+                <viewController storyboardIdentifier="PromotionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4He-Ub-gwB" customClass="PromotionsViewController" customModule="Food_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v6U-uN-gC7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-Jw-gWP">
+                                <rect key="frame" x="163.5" y="44" width="87.5" height="57.5"/>
+                                <string key="text">Kazarov
+delivery</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="olr-L0-c5O">
+                                <rect key="frame" x="145.5" y="810.5" width="123" height="27.5"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MAv-oC-zt0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r7E-Jw-gWP" firstAttribute="top" secondItem="MAv-oC-zt0" secondAttribute="top" priority="750" id="3CQ-4N-Td5"/>
+                            <constraint firstItem="r7E-Jw-gWP" firstAttribute="centerX" secondItem="v6U-uN-gC7" secondAttribute="centerX" id="AKg-wF-bGF"/>
+                            <constraint firstItem="r7E-Jw-gWP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MAv-oC-zt0" secondAttribute="leading" constant="24" id="LuS-I6-FtC"/>
+                            <constraint firstItem="olr-L0-c5O" firstAttribute="centerX" secondItem="v6U-uN-gC7" secondAttribute="centerX" id="mNn-E8-K8R"/>
+                            <constraint firstItem="MAv-oC-zt0" firstAttribute="bottom" secondItem="olr-L0-c5O" secondAttribute="bottom" constant="24" id="pWK-ML-uSu"/>
+                            <constraint firstItem="olr-L0-c5O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r7E-Jw-gWP" secondAttribute="bottom" constant="200" id="uE6-Ne-lcB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="olr-L0-c5O" id="G4i-B1-690"/>
+                        <outlet property="titleLabel" destination="r7E-Jw-gWP" id="Ka6-6Z-1tO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8f-oS-1EV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733.33333333333337" y="134.59821428571428"/>
+        </scene>
+        <!--Promotion View Controller-->
+        <scene sceneID="b6H-oY-ABT">
+            <objects>
+                <viewController storyboardIdentifier="PromotionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="APP-lf-z09" customClass="PromotionViewController" customModule="Food_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yl4-tK-mnR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ke-mn-Bu9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9IM-fC-pH2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ke-mn-Bu9" firstAttribute="trailing" secondItem="9IM-fC-pH2" secondAttribute="trailing" id="MYP-kc-Ilj"/>
+                            <constraint firstItem="0Ke-mn-Bu9" firstAttribute="top" secondItem="yl4-tK-mnR" secondAttribute="top" priority="750" id="bBy-xq-QAj"/>
+                            <constraint firstItem="0Ke-mn-Bu9" firstAttribute="leading" secondItem="9IM-fC-pH2" secondAttribute="leading" id="n0S-F7-CPi"/>
+                            <constraint firstAttribute="bottom" secondItem="0Ke-mn-Bu9" secondAttribute="bottom" id="ydY-Qv-GnA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0Ke-mn-Bu9" id="ahc-m7-Cfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drx-fM-n1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
