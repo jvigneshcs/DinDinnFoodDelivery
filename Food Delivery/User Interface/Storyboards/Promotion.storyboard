@@ -17,6 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BFc-V3-Uv3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2tk-BZ-q1g">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4He-Ub-gwB" id="3aA-5Y-GNI"/>
+                                    <outlet property="delegate" destination="4He-Ub-gwB" id="fuU-nf-968"/>
+                                </connections>
+                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-Jw-gWP">
                                 <rect key="frame" x="163.5" y="44" width="87.5" height="57.5"/>
                                 <string key="text">Kazarov
@@ -26,21 +41,26 @@ delivery</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="olr-L0-c5O">
-                                <rect key="frame" x="145.5" y="810.5" width="123" height="27.5"/>
+                                <rect key="frame" x="145.5" y="764.5" width="123" height="27.5"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MAv-oC-zt0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="r7E-Jw-gWP" firstAttribute="top" secondItem="MAv-oC-zt0" secondAttribute="top" priority="750" id="3CQ-4N-Td5"/>
+                            <constraint firstItem="BFc-V3-Uv3" firstAttribute="leading" secondItem="MAv-oC-zt0" secondAttribute="leading" id="3xA-A7-WnO"/>
                             <constraint firstItem="r7E-Jw-gWP" firstAttribute="centerX" secondItem="v6U-uN-gC7" secondAttribute="centerX" id="AKg-wF-bGF"/>
                             <constraint firstItem="r7E-Jw-gWP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MAv-oC-zt0" secondAttribute="leading" constant="24" id="LuS-I6-FtC"/>
+                            <constraint firstItem="BFc-V3-Uv3" firstAttribute="top" secondItem="v6U-uN-gC7" secondAttribute="top" id="M25-oc-jKs"/>
+                            <constraint firstAttribute="bottom" secondItem="BFc-V3-Uv3" secondAttribute="bottom" id="NZl-rd-ANX"/>
+                            <constraint firstItem="BFc-V3-Uv3" firstAttribute="trailing" secondItem="MAv-oC-zt0" secondAttribute="trailing" id="hZc-3j-6ck"/>
                             <constraint firstItem="olr-L0-c5O" firstAttribute="centerX" secondItem="v6U-uN-gC7" secondAttribute="centerX" id="mNn-E8-K8R"/>
-                            <constraint firstItem="MAv-oC-zt0" firstAttribute="bottom" secondItem="olr-L0-c5O" secondAttribute="bottom" constant="24" id="pWK-ML-uSu"/>
+                            <constraint firstItem="MAv-oC-zt0" firstAttribute="bottom" secondItem="olr-L0-c5O" secondAttribute="bottom" constant="70" id="pWK-ML-uSu"/>
                             <constraint firstItem="olr-L0-c5O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r7E-Jw-gWP" secondAttribute="bottom" constant="200" id="uE6-Ne-lcB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="BFc-V3-Uv3" id="AoG-Zb-012"/>
                         <outlet property="pageControl" destination="olr-L0-c5O" id="G4i-B1-690"/>
                         <outlet property="titleLabel" destination="r7E-Jw-gWP" id="Ka6-6Z-1tO"/>
                     </connections>

@@ -32,7 +32,8 @@ class PromotionsContainerPagingView: PagingView {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: options.menuHeight),
-            collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor,
+                                                constant: -options.menuHeight),
 
             headerView.topAnchor.constraint(equalTo: topAnchor),
             headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -43,5 +44,6 @@ class PromotionsContainerPagingView: PagingView {
             pageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             pageView.topAnchor.constraint(equalTo: topAnchor),
         ])
+        self.bringSubviewToFront(self.collectionView)
     }
 }

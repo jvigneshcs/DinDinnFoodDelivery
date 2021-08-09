@@ -7,6 +7,7 @@
 
 import UIKit
 import Parchment
+import UIKitExtension
 
 class PromotionsPagingViewController: PagingViewController {
     
@@ -28,6 +29,17 @@ class PromotionsPagingViewController: PagingViewController {
         view.headerView.addSubview(vc.view)
         view.headerView.constrainToEdges(vc.view)
         vc.didMove(toParent: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let view = (self.view as? PromotionsContainerPagingView)?.collectionView else {
+            return
+        }
+        
+        let bounds = view.bounds
+        view.roundCorners(corners: [.topLeft, .topRight],
+                          radius: bounds.height)
     }
     
 

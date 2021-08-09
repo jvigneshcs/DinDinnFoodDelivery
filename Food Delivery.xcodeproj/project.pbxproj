@@ -42,6 +42,9 @@
 		9BA5F5DC26BFC83B006FDD8C /* Promotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F5DB26BFC83B006FDD8C /* Promotion.storyboard */; };
 		9BA5F5E126BFCB19006FDD8C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5E026BFCB19006FDD8C /* UIView+Constraints.swift */; };
 		9BA5F5E726BFCBE2006FDD8C /* PromotionsPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5E626BFCBE2006FDD8C /* PromotionsPagingViewController.swift */; };
+		9BA5F5EC26C0FFBC006FDD8C /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F5EA26C0FFBC006FDD8C /* PromotionCollectionViewCell.swift */; };
+		9BA5F5ED26C0FFBC006FDD8C /* PromotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F5EB26C0FFBC006FDD8C /* PromotionCollectionViewCell.xib */; };
+		9BA5F5F226C121D9006FDD8C /* UIKitExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 9BA5F5F126C121D9006FDD8C /* UIKitExtension */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,8 @@
 		9BA5F5DB26BFC83B006FDD8C /* Promotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Promotion.storyboard; sourceTree = "<group>"; };
 		9BA5F5E026BFCB19006FDD8C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		9BA5F5E626BFCBE2006FDD8C /* PromotionsPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsPagingViewController.swift; sourceTree = "<group>"; };
+		9BA5F5EA26C0FFBC006FDD8C /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BA5F5EB26C0FFBC006FDD8C /* PromotionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8EA26926BC101600713A29 /* Parchment in Frameworks */,
+				9BA5F5F226C121D9006FDD8C /* UIKitExtension in Frameworks */,
 				9BA5F59826BE9027006FDD8C /* BadgeSwift in Frameworks */,
 				9BA5F58926BE5AFF006FDD8C /* FoundationExtension in Frameworks */,
 			);
@@ -100,6 +106,7 @@
 			children = (
 				9B8EA24826BC029600713A29 /* Food Delivery */,
 				9B8EA24726BC029600713A29 /* Products */,
+				9BA5F5F026C121D9006FDD8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +277,7 @@
 		9BA5F58E26BE685B006FDD8C /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				9BA5F5E926C0FF9C006FDD8C /* Promotion */,
 				9BA5F58F26BE6878006FDD8C /* Item */,
 			);
 			path = CollectionViewCells;
@@ -391,6 +399,22 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		9BA5F5E926C0FF9C006FDD8C /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F5EA26C0FFBC006FDD8C /* PromotionCollectionViewCell.swift */,
+				9BA5F5EB26C0FFBC006FDD8C /* PromotionCollectionViewCell.xib */,
+			);
+			path = Promotion;
+			sourceTree = "<group>";
+		};
+		9BA5F5F026C121D9006FDD8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +435,7 @@
 				9B8EA26826BC101600713A29 /* Parchment */,
 				9BA5F58826BE5AFF006FDD8C /* FoundationExtension */,
 				9BA5F59726BE9027006FDD8C /* BadgeSwift */,
+				9BA5F5F126C121D9006FDD8C /* UIKitExtension */,
 			);
 			productName = "Food Delivery";
 			productReference = 9B8EA24626BC029600713A29 /* Food Delivery.app */;
@@ -465,6 +490,7 @@
 				9BA5F59C26BE905E006FDD8C /* FAB.xib in Resources */,
 				9BA5F57F26BE5A16006FDD8C /* Menus.json in Resources */,
 				9B8EA25126BC029600713A29 /* Main.storyboard in Resources */,
+				9BA5F5ED26C0FFBC006FDD8C /* PromotionCollectionViewCell.xib in Resources */,
 				9BA5F5D126BFB845006FDD8C /* CartTableFooterView.xib in Resources */,
 				9BA5F5C826BFA356006FDD8C /* CartItemTableViewCell.xib in Resources */,
 				9BA5F5B826BEB997006FDD8C /* Shopping.storyboard in Resources */,
@@ -495,6 +521,7 @@
 				9BA5F59F26BE9083006FDD8C /* FAB.swift in Sources */,
 				9B8EA27126BC15F800713A29 /* PromotionViewController.swift in Sources */,
 				9BA5F57926BE554A006FDD8C /* SelfInitViewController.swift in Sources */,
+				9BA5F5EC26C0FFBC006FDD8C /* PromotionCollectionViewCell.swift in Sources */,
 				9BA5F5D826BFC7FB006FDD8C /* PromotionsViewController.swift in Sources */,
 				9B8EA24C26BC029600713A29 /* SceneDelegate.swift in Sources */,
 				9BA5F58426BE5A8F006FDD8C /* Menu.swift in Sources */,
@@ -744,6 +771,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BA5F59626BE9027006FDD8C /* XCRemoteSwiftPackageReference "swift-badge" */;
 			productName = BadgeSwift;
+		};
+		9BA5F5F126C121D9006FDD8C /* UIKitExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BA5F58726BE5AFF006FDD8C /* XCRemoteSwiftPackageReference "SwiftExtension" */;
+			productName = UIKitExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

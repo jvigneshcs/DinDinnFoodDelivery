@@ -35,7 +35,7 @@ final class MenuViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib(nibName: "ItemCollectionViewCell",
+        let nib = UINib(nibName: self.cellIdentifier,
                         bundle: nil)
         self.collectionView.register(nib,
                                      forCellWithReuseIdentifier: self.cellIdentifier)

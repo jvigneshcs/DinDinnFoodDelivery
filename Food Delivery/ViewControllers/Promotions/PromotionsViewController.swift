@@ -6,35 +6,40 @@
 //
 
 import UIKit
-import Parchment
 
 final class PromotionsViewController: UIViewController {
     
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
-    let viewControllers: [UIViewController] = [
-        PromotionViewController.initWithImage(UIImage(named: "Promo1")!),
-        PromotionViewController.initWithImage(UIImage(named: "Promo2")!),
-        PromotionViewController.initWithImage(UIImage(named: "Promo3")!),
+    let images = [
+        UIImage(named: "Promo1")!,
+        UIImage(named: "Promo2")!,
+        UIImage(named: "Promo3")!,
     ]
+    
+    private let identifier = String(describing: PromotionCollectionViewCell.self)
+    
+    private lazy var flowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        layout.estimatedItemSize = self.collectionView.frame.size
+        
+        return layout
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let pageViewController = PageViewController()
-        pageViewController.dataSource = self
-        pageViewController.delegate = self
-        pageViewController.selectViewController(viewControllers[0],
-                                                direction: .none)
-        let subview = pageViewController.view!
+        let nib = UINib(nibName: self.identifier,
+                        bundle: nil)
         
-        addChild(pageViewController)
-        view.addSubview(subview)
-        view.constrainToEdges(subview)
-        view.sendSubviewToBack(subview)
-        pageViewController.didMove(toParent: self)
-        self.pageControl.numberOfPages = self.viewControllers.count
+        self.collectionView.register(nib,
+                                     forCellWithReuseIdentifier: self.identifier)
+        self.collectionView.collectionViewLayout = self.flowLayout
+        self.pageControl.numberOfPages = self.images.count
     }
     
 
@@ -50,44 +55,32 @@ final class PromotionsViewController: UIViewController {
 
 }
 
-extension PromotionsViewController: PageViewControllerDataSource {
-    func pageViewController(
-        _: PageViewController,
-        viewControllerBeforeViewController viewController: UIViewController
-    ) -> UIViewController? {
-        guard let index = viewControllers.firstIndex(of: viewController) else { return nil }
-        if index > 0 {
-            return viewControllers[index - 1]
-        } else {
-            return viewControllers[viewControllers.count - 1]
-        }
+extension PromotionsViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.images.count
     }
-
-    func pageViewController(
-        _: PageViewController,
-        viewControllerAfterViewController viewController: UIViewController
-    ) -> UIViewController? {
-        guard let index = viewControllers.firstIndex(of: viewController) else { return nil }
-        if index < viewControllers.count - 1 {
-            return viewControllers[index + 1]
-        } else {
-            return viewControllers[0]
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.identifier,
+                                                            for: indexPath) as? PromotionCollectionViewCell else {
+            return UICollectionViewCell()
         }
+        
+        cell.set(image: self.images[indexPath.item])
+        
+        return cell
     }
 }
 
-extension PromotionsViewController: PageViewControllerDelegate {
+extension PromotionsViewController: UICollectionViewDelegateFlowLayout {
     
-    func pageViewController(_ pageViewController: PageViewController, willStartScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController) {
-        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        collectionView.frame.size
     }
     
-    func pageViewController(_ pageViewController: PageViewController, isScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController?, progress: CGFloat) {
-        
-    }
-    
-    func pageViewController(_ pageViewController: PageViewController, didFinishScrollingFrom startingViewController: UIViewController, destinationViewController: UIViewController, transitionSuccessful: Bool) {
-        guard let index = self.viewControllers.firstIndex(of: destinationViewController) else { return }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / scrollView.frame.width)
         
         self.pageControl.currentPage = index
     }
